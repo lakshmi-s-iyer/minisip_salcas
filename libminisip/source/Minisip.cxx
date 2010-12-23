@@ -519,14 +519,14 @@ int Minisip::startSip() {
 		   sip->getSipStack()->handleCommand(sipcmdss);
 		   */
 
-		/*
-		   cerr << "Minisip: starting presence client for johan@bilien.org"<< endl;
+		
+		cerr << "Minisip: starting presence client for "<< endl;
 
-		   CommandString subscribe("", SipCommandString::start_presence_client,"johan@bilien.org");
-		   SipSMCommand sipcmd2(subscribe, SipSMCommand::remote, SipSMCommand::TU);
-		   sip->getSipStack()->handleCommand(sipcmd2);
-		   */
-printf("---------------------- Minisip startSip Message Router setCallBack ");
+		CommandString subscribe("", SipCommandString::start_presence_client,"salcals@1.2.3.4");
+		SipSMCommand sipcmd2(subscribe, SipSMCommand::dialog_layer, SipSMCommand::dialog_layer);
+		sip->getSipStack()->handleCommand(sipcmd2);
+		   
+		printf("---------------------- Minisip startSip Message Router setCallBack ");
 		gui->setCallback(*messageRouter);
 		gui->setConfCallback(*confMessageRouter);
 
