@@ -30,8 +30,7 @@
 #include"GtkMainUI.h"
 
 #include"DtmfWidget.h"
-#include"GroupContactTree.h"//
-
+#include"GroupContactTree.h"
 #include<libmutil/Mutex.h>
 #include<libmutil/minilist.h>
 #include <libglademm/xml.h>
@@ -205,7 +204,8 @@ class MainWindow : public GtkMainUI,
 		Gtk::ComboBox * accountListView;
 		Gtk::Label * accountLabel;
 		Gtk::Entry * uriEntry;
-		PhoneBookModel * phoneBookModel;
+		Gtk::TreeView * groupContactTreeView;
+                PhoneBookModel * phoneBookModel;
 		PhoneBookTree * phoneBookTree;
 		Glib::RefPtr<Gtk::TreeSelection> treeSelection;
 		Gtk::Main *kit;
@@ -218,7 +218,7 @@ class MainWindow : public GtkMainUI,
 		Glib::RefPtr<TransportList> transportList;
 		Glib::RefPtr<Gtk::IconFactory> factory;
 		Glib::RefPtr<Gdk::Pixbuf> icon;
-                GtkWidget *treeView1;
+                
 
 		/**
 		* This function is connected to the window close icon

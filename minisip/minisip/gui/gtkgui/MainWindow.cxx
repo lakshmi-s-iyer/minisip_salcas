@@ -110,6 +110,7 @@ MainWindow::MainWindow( Gtk::Main *main, std::string programDir ):kit( main ){
 	Gtk::MenuItem * conferenceMenu;
 	Gtk::MenuItem * imMenu;
 	Gtk::MenuItem * aboutMenu;
+        
 	
 	Glib::RefPtr<Gnome::Glade::Xml>  refXml;
 #ifndef OLDLIBGLADEMM
@@ -135,7 +136,7 @@ MainWindow::MainWindow( Gtk::Main *main, std::string programDir ):kit( main ){
 	refXml->get_widget( "phoneBookTree", phoneBookTreeView );
 //Group Communication	
 	//nebula
-
+        refXml->get_widget( "treeView1",groupContactTreeView);
 	refXml->get_widget( "phoneMenu", phoneMenu );
 	refXml->get_widget( "phoneAddMenu", phoneAddMenu );
 	refXml->get_widget( "phoneAddAddressMenu", phoneAddAddressMenu );
@@ -293,8 +294,8 @@ MainWindow::MainWindow( Gtk::Main *main, std::string programDir ):kit( main ){
 		SLOT( *membergroupDialog, &MemberGroupDialog::show ));
 	editContactGroupMenu->signal_activate(). connect(
 		SLOT( *membergroupDialog, &MemberGroupDialog:: editMemberGroup));
-	/*removeContactGroupMenu->signal_activate(). connect(
-		SLOT( *membergroupDialog, &MemberGroupDialog:: removeMemberGroup));*/
+	removeContactGroupMenu->signal_activate(). connect(
+		SLOT( *membergroupDialog, &MemberGroupDialog:: removeMemberGroup));
 		
 	refXml->get_widget( "callButton", callButton );
 
@@ -310,7 +311,7 @@ MainWindow::MainWindow( Gtk::Main *main, std::string programDir ):kit( main ){
 
 	phoneBookTreeView->signal_row_activated().connect( SLOT( *this, &MainWindow::inviteFromTreeview ) );
 
-	//groupContactTreeView->
+	//groupContactTreeView->signal_row_activated().connect( SLOT( *this, &MainWindow::selectedTreeView ) );
 
 	refXml->get_widget( "imButton", imButton );
 
@@ -921,6 +922,11 @@ void MainWindow::accountListSelect() {
 // Instant Talk
 void MainWindow::instanttalkClick(){
 	cerr << "INSTANT TALK"<< endl;
+        Glib::RefPtr<Gtk::TreeSelection>selectedVal=groupContactTreeView->get_selection();
+        gpointer gval=gtk_tree_selection_get_user_data(selectedVal->gobj());
+        cout<<"the vlaue is "<<gval;
+        
+        
  	//sukru fill here
 }
 

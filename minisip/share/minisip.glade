@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <glade-interface>
   <!-- interface-requires gtk+ 2.8 -->
   <!-- interface-naming-policy project-wide -->
@@ -834,7 +834,7 @@
                                                     <property name="can_focus">True</property>
                                                     <property name="tooltip" translatable="yes">Example:
 decklink:0/720p50@25</property>
-                                                    <property name="invisible_char">&#x25CF;</property>
+                                                    <property name="invisible_char">●</property>
                                                   </widget>
                                                 </child>
                                               </widget>
@@ -894,7 +894,7 @@ decklink:0/720p50@25</property>
 
 Example:
 /dev/video0</property>
-                                                    <property name="invisible_char">&#x25CF;</property>
+                                                    <property name="invisible_char">●</property>
                                                   </widget>
                                                 </child>
                                               </widget>
@@ -954,7 +954,7 @@ Example:
 
 Example:
 1024x720</property>
-                                                    <property name="invisible_char">&#x25CF;</property>
+                                                    <property name="invisible_char">●</property>
                                                   </widget>
                                                 </child>
                                               </widget>
@@ -1001,7 +1001,7 @@ Example:
 
 Example:
 24</property>
-                                                    <property name="invisible_char">&#x25CF;</property>
+                                                    <property name="invisible_char">●</property>
                                                   </widget>
                                                 </child>
                                               </widget>
@@ -1636,7 +1636,7 @@ Example:
                       </widget>
                     </child>
                     <child>
-                      <widget class="GtkSeparatorMenuItem" id="s&#xE9;parateur2">
+                      <widget class="GtkSeparatorMenuItem" id="séparateur2">
                         <property name="visible">True</property>
                       </widget>
                     </child>
@@ -1717,7 +1717,7 @@ Example:
                       </widget>
                     </child>
                     <child>
-                      <widget class="GtkSeparatorMenuItem" id="s&#xE9;parateur3">
+                      <widget class="GtkSeparatorMenuItem" id="séparateur3">
                         <property name="visible">True</property>
                       </widget>
                     </child>
@@ -2032,27 +2032,18 @@ Example:
                 <child>
                   <widget class="GtkHBox" id="hbox21">
                     <property name="visible">True</property>
+                    <property name="homogeneous">True</property>
                     <child>
-                      <widget class="GtkEntry" id="entry1">
-                        <property name="width_request">0</property>
-                        <property name="height_request">0</property>
+                      <widget class="GtkLabel" id="nebnameLabel">
                         <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="invisible_char">&#x25CF;</property>
+                        <property name="max_width_chars">7</property>
                       </widget>
                       <packing>
                         <property name="position">0</property>
                       </packing>
                     </child>
                     <child>
-                      <widget class="GtkComboBox" id="gc_status">
-                        <property name="visible">True</property>
-                        <property name="items" translatable="yes">OnLine
-OffLine</property>
-                      </widget>
-                      <packing>
-                        <property name="position">1</property>
-                      </packing>
+                      <placeholder/>
                     </child>
                     <child>
                       <widget class="GtkButton" id="signoutButton">
@@ -3706,7 +3697,7 @@ OffLine</property>
               <widget class="GtkEntry" id="fullnameEntry">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="invisible_char">&#x25CF;</property>
+                <property name="invisible_char">●</property>
               </widget>
               <packing>
                 <property name="expand">False</property>
@@ -3734,7 +3725,7 @@ OffLine</property>
               <widget class="GtkEntry" id="nebulausernameEntry">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="invisible_char">&#x25CF;</property>
+                <property name="invisible_char">●</property>
               </widget>
               <packing>
                 <property name="expand">False</property>
@@ -3762,7 +3753,7 @@ OffLine</property>
               <widget class="GtkEntry" id="passwordnEntry">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="invisible_char">&#x25CF;</property>
+                <property name="invisible_char">●</property>
               </widget>
               <packing>
                 <property name="expand">False</property>
@@ -3791,7 +3782,7 @@ OffLine</property>
               <widget class="GtkEntry" id="emailaddressEntry">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="invisible_char">&#x25CF;</property>
+                <property name="invisible_char">●</property>
               </widget>
               <packing>
                 <property name="expand">False</property>
@@ -3820,7 +3811,7 @@ OffLine</property>
               <widget class="GtkEntry" id="addressEntry">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="invisible_char">&#x25CF;</property>
+                <property name="invisible_char">●</property>
               </widget>
               <packing>
                 <property name="expand">False</property>
@@ -3848,7 +3839,7 @@ OffLine</property>
               <widget class="GtkEntry" id="phonenumberEntry">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="invisible_char">&#x25CF;</property>
+                <property name="invisible_char">●</property>
               </widget>
               <packing>
                 <property name="expand">False</property>
@@ -3952,7 +3943,7 @@ OffLine</property>
               <widget class="GtkEntry" id="nusernameEntry">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="invisible_char">&#x25CF;</property>
+                <property name="invisible_char">●</property>
               </widget>
               <packing>
                 <property name="expand">False</property>
@@ -3981,7 +3972,7 @@ OffLine</property>
               <widget class="GtkEntry" id="npasswordEntry">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="invisible_char">&#x25CF;</property>
+                <property name="invisible_char">●</property>
               </widget>
               <packing>
                 <property name="expand">False</property>
@@ -4093,7 +4084,7 @@ OffLine</property>
               <widget class="GtkEntry" id="groupnameEntry">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="invisible_char">&#x25CF;</property>
+                <property name="invisible_char">●</property>
               </widget>
               <packing>
                 <property name="left_attach">1</property>
@@ -4214,7 +4205,7 @@ OffLine</property>
               <widget class="GtkEntry" id="contactnameEntry">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="invisible_char">&#x25CF;</property>
+                <property name="invisible_char">●</property>
               </widget>
               <packing>
                 <property name="left_attach">1</property>
@@ -4225,7 +4216,7 @@ OffLine</property>
               <widget class="GtkEntry" id="nebulanameEntry">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="invisible_char">&#x25CF;</property>
+                <property name="invisible_char">●</property>
               </widget>
               <packing>
                 <property name="left_attach">1</property>
@@ -4375,7 +4366,7 @@ OffLine</property>
               <widget class="GtkEntry" id="entry11">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="invisible_char">&#x25CF;</property>
+                <property name="invisible_char">●</property>
               </widget>
               <packing>
                 <property name="left_attach">1</property>
@@ -4386,7 +4377,7 @@ OffLine</property>
               <widget class="GtkEntry" id="entry12">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="invisible_char">&#x25CF;</property>
+                <property name="invisible_char">●</property>
               </widget>
               <packing>
                 <property name="left_attach">1</property>
