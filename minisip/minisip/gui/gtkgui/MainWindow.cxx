@@ -289,7 +289,7 @@ MainWindow::MainWindow( Gtk::Main *main, std::string programDir ):kit( main ){
 	addGroupMenu->signal_activate().connect(
 		SLOT( *groupDialog, &GroupDialog::show ));
 	removeGroupMenu->signal_activate().connect(
-		SLOT( *groupDialog, &GroupDialog::show ));
+		SLOT( *groupDialog, &GroupDialog::removeGroup ));
 	addContactGroupMenu->signal_activate().connect(
 		SLOT( *membergroupDialog, &MemberGroupDialog::show ));
 	editContactGroupMenu->signal_activate(). connect(

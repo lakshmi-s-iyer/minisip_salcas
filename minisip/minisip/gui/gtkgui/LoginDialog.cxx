@@ -62,7 +62,6 @@ void LoginDialog::signIn(){
         {
         nebnameLabel->set_label( cred->cred_username);   
         loginDialogWidget->hide();
-        cout<<"the set up tree view is called"<<endl;
         setup_tree_view(groupContactTreeView->gobj());
         }
 		
